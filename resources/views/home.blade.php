@@ -1,16 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Home Page</h1>
-<ul>
-    @foreach($movies as $movie)
-    <li>
-        <h3>{{ $movie->title }}</h3>
-        <p>{{ $movie->original_title}}</p>
-        <p>{{ $movie->nationality}}</p>
-        <p>{{ $movie->date}}</p>
-        <p>{{ $movie->vote}}</p>
-    </li>
-    @endforeach
-</ul>
+<div class="container">
+    <div class="text-center">
+        <img src="{{ Vite::asset('resources/img/multimedia.png')}}" alt="">
+    </div>
+
+    <ul class="d-flex flex-wrap">
+        @foreach($movies as $movie)
+        <li class="col-4 p-3">
+            <div class="card text-center p-3">
+                <h5>{{ $movie->title }}</h3>
+                <p>{{ $movie->original_title}}</p>
+                <p>{{ $movie->nationality}}</p>
+                <p>{{ $movie->date}}</p>
+                <p>{{ $movie->vote}}</p>
+            </div>
+        </li>
+        @endforeach
+    </ul>
+</div>
 @endsection
