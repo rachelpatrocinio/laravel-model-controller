@@ -10,7 +10,7 @@
         @foreach($movies as $movie)
         <li class="col-4 p-3">
             <div class="card text-center p-3">
-                <h5>{{ $movie->title }}</h3>
+                <h5>{{ $movie->title }}</h5>
                 <p>{{ $movie->original_title}}</p>
                 <p>{{ $movie->nationality}}</p>
                 <p>{{ $movie->date}}</p>
